@@ -9,11 +9,10 @@ log = Logger().createLogger()
 config = Config()
 browser = Browser(log, config)
 
-user = S3Connection(os.environ['user']
-passw = S3Connection(os.environ['pass']
+usernamer = (os.environ.get('user'))
+passworder = (os.environ.get('pass'))
 
-#is it obvious i dont know how to code
-if browser.login(user, passw):
+if browser.login(usernamer, passworder):
     log.info("Successfully logged in")
     while True:
         try:
