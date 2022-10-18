@@ -115,7 +115,7 @@ class Browser:
         for tid in self.liveMatches:
             if tid not in self.currentlyWatching:
                 self.watch(self.liveMatches[tid])
-                self.log.info(f"Started watching {self.liveMatches[tid].league}")
+                print(f"Started watching {self.liveMatches[tid].league}")
 
     def watch(self, match: Match):
         self.currentlyWatching[match.tournamentId] = threading.Timer(
