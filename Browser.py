@@ -23,14 +23,14 @@ class Browser:
         self.liveMatches = {}
 
     # Initial login
-    def login(self, user, passw):
+    def login(self, username, password):
         # Get necessary cookies from the main page
         self.client.get(
             "https://login.leagueoflegends.com/?redirect_uri=https://lolesports.com/&lang=en")
 
         # Submit credentials
-        data = {"type": "auth", "username": user,
-                "password": passw, "remember": True, "language": "en_US"}
+        data = {"type": "auth", "username": username,
+                "password": password, "remember": True, "language": "en_US"}
         res = self.client.put(
             "https://auth.riotgames.com/api/v1/authorization", json=data)
         resJson = res.json()
