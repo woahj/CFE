@@ -34,7 +34,6 @@ class Browser:
         res = self.client.put(
             "https://auth.riotgames.com/api/v1/authorization", json=data)
         resJson = res.json()
-        print(resJson)
         if resJson.get("type", "") and resJson["response"].get("parameters", "") and resJson["response"]["parameters"].get("uri", ""):
             # Finish OAuth2 login
             res = self.client.get(resJson["response"]["parameters"]["uri"])
