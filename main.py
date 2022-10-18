@@ -11,7 +11,8 @@ browser = Browser(log, config)
 
 username = (os.environ.get('user'))
 password = (os.environ.get('pass'))
-
+print(username)
+print(password)
 if browser.login(username, password):
     log.info("Successfully logged in")
     while True:
