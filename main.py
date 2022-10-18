@@ -9,10 +9,10 @@ log = Logger().createLogger()
 config = Config()
 browser = Browser(log, config)
 
-user = (os.environ.get('user'))
-passw = (os.environ.get('pass'))
+username = (os.environ.get('user'))
+password = (os.environ.get('pass'))
 
-if browser.login(user, passw):
+if browser.login(username, password):
     log.info("Successfully logged in")
     while True:
         try:
