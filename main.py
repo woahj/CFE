@@ -1,12 +1,10 @@
 from time import sleep
 from Logger.Logger import Logger
-from Config import Config
 from Browser import Browser
 import os
 
 
 log = Logger().createLogger()
-config = Config()
 browser = Browser(log, config)
 
 usernamer = (os.environ.get('user'))
