@@ -15,11 +15,13 @@ if browser.login(username, password):
     log.info("Successfully logged in")
     while True:
         try:
+            print("doing loop")
             browser.getLiveMatches()
             browser.cleanUpWatchlist()
             browser.startWatchingNewMatches()
+            print("looped")
             log.debug(f"Currently watching: {', '.join([m.league for m in browser.liveMatches.values()])}")
-            sleep(60)
+            sleep(10)
         except KeyboardInterrupt:
             browser.stopMaintaininingSession()
             browser.stopWatchingAll()
