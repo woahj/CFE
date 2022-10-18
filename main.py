@@ -2,7 +2,7 @@ from time import sleep
 from Logger.Logger import Logger
 from Config import Config
 from Browser import Browser
-from boto.s3.connection import S3Connection
+import os
 
 
 log = Logger().createLogger()
