@@ -21,7 +21,7 @@ if browser.login(username, password):
             browser.startWatchingNewMatches()
             print("looped")
             log.debug(f"Currently watching: {', '.join([m.league for m in browser.liveMatches.values()])}")
-            sleep(10)
+            sleep(60)
         except KeyboardInterrupt:
             browser.stopMaintaininingSession()
             browser.stopWatchingAll()
